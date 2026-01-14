@@ -1,0 +1,35 @@
+@plugin "daisyui/theme" {
+  name: "brick";
+  default: false;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #FFFFFF;
+  --color-base-200: #C2BFA5;
+  --color-base-300: #8D8961;
+  --color-base-content: #000000;
+  --color-primary: #800000;
+  --color-primary-content: #E1E0D2;
+  --color-secondary: #8D8961;
+  --color-secondary-content: #E1E0D2;
+  --color-accent: #8D8961;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #C2BFA5;
+  --color-neutral-content: #000000;
+  --color-info: #E1E0D2;
+  --color-info-content: #800000;
+  --color-success: #008000;
+  --color-success-content: #FFFFFF;
+  --color-warning: #808000;
+  --color-warning-content: #FFFFFF;
+  --color-error: #FF0000;
+  --color-error-content: #FFFFFF;
+
+  --radius-selector: 0px;
+  --radius-field: 0px;
+  --radius-box: 0px;
+
+  --border: 2px;
+  --depth: 0;
+  --noise: 0;
+}

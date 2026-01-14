@@ -1,0 +1,35 @@
+@plugin "daisyui/theme" {
+  name: "wheat";
+  default: false;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #FFFFFF;
+  --color-base-200: #DEDEA0;
+  --color-base-300: #BCBC41;
+  --color-base-content: #000000;
+  --color-primary: #808000;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #BCBC41;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #808000;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #DEDEA0;
+  --color-neutral-content: #000000;
+  --color-info: #FFFFFF;
+  --color-info-content: #000000;
+  --color-success: #008000;
+  --color-success-content: #FFFFFF;
+  --color-warning: #808000;
+  --color-warning-content: #FFFFFF;
+  --color-error: #FF0000;
+  --color-error-content: #FFFFFF;
+
+  --radius-selector: 0px;
+  --radius-field: 0px;
+  --radius-box: 0px;
+
+  --border: 2px;
+  --depth: 0;
+  --noise: 0;
+}

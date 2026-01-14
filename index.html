@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="classic">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinDaisy Enterprise ERP</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="h-screen w-screen flex flex-col bg-base-200 text-base-content overflow-hidden select-none">
+
+    <!-- Title Bar -->
+    <div class="bg-primary text-white px-1 py-0.5 flex justify-between items-center h-8 shrink-0">
+        <div class="flex items-center gap-2 font-bold px-1">
+            <!-- Simple placeholder icon -->
+            <svg class="w-4 h-4 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 1h14v14H1z"/></svg>
+            WinDaisy Enterprise Solution v1.0
+        </div>
+        <div class="flex gap-1 mr-0.5">
+            <button class="w-5 h-4 bg-base-200 text-base-content text-xs font-bold leading-none flex items-center justify-center w95-outset">_</button>
+            <button class="w-5 h-4 bg-base-200 text-base-content text-xs font-bold leading-none flex items-center justify-center w95-outset">□</button>
+            <button class="w-5 h-4 bg-base-200 text-base-content text-xs font-bold leading-none flex items-center justify-center w95-outset">×</button>
+        </div>
+    </div>
+
+    <!-- Menu Bar -->
+    <div class="flex px-1 bg-base-200 text-sm shrink-0">
+        <div class="dropdown dropdown-bottom">
+            <div tabindex="0" role="button" class="px-2 py-1 hover:bg-primary hover:text-white cursor-default">File</div>
+            <ul tabindex="0" class="dropdown-content z-[50] menu p-0 bg-base-200 w-48 text-base-content w95-outset rounded-none">
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">New Order... <span class="ml-auto text-xs">Ctrl+N</span></a></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Open Database... <span class="ml-auto text-xs">Ctrl+O</span></a></li>
+                <li class="border-b border-gray-400 my-0.5 mx-1 border-b border-white"></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Save</a></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Save As...</a></li>
+                <li class="border-b border-gray-400 my-0.5 mx-1 border-b border-white"></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Page Setup...</a></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Print... <span class="ml-auto text-xs">Ctrl+P</span></a></li>
+                <li class="border-b border-gray-400 my-0.5 mx-1 border-b border-white"></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Exit</a></li>
+            </ul>
+        </div>
+        <div class="dropdown dropdown-bottom">
+            <div tabindex="0" role="button" class="px-2 py-1 hover:bg-primary hover:text-white cursor-default">Edit</div>
+            <ul tabindex="0" class="dropdown-content z-[50] menu p-0 bg-base-200 w-40 text-base-content w95-outset rounded-none">
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Undo <span class="ml-auto text-xs">Ctrl+Z</span></a></li>
+                <li class="border-b border-gray-400 my-0.5 mx-1 border-b border-white"></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Cut <span class="ml-auto text-xs">Ctrl+X</span></a></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Copy <span class="ml-auto text-xs">Ctrl+C</span></a></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Paste <span class="ml-auto text-xs">Ctrl+V</span></a></li>
+            </ul>
+        </div>
+        <div class="dropdown dropdown-bottom">
+            <div tabindex="0" role="button" class="px-2 py-1 hover:bg-primary hover:text-white cursor-default">View</div>
+             <ul tabindex="0" class="dropdown-content z-[50] menu p-0 bg-base-200 w-40 text-base-content w95-outset rounded-none">
+                
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Toolbar</a></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Status Bar</a></li>
+                <li class="border-b border-gray-400 my-0.5 mx-1 border-b border-white"></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Refresh</a></li>
+            </ul>
+        </div>
+        <div class="dropdown dropdown-bottom">
+            <div tabindex="0" role="button" class="px-2 py-1 hover:bg-primary hover:text-white cursor-default">Tools</div>
+             <ul tabindex="0" class="dropdown-content z-[50] menu p-0 bg-base-200 w-40 text-base-content w95-outset rounded-none">
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Options...</a></li>
+            </ul>
+        </div>
+        <div class="dropdown dropdown-bottom">
+            <div tabindex="0" role="button" class="px-2 py-1 hover:bg-primary hover:text-white cursor-default">Help</div>
+             <ul tabindex="0" class="dropdown-content z-[50] menu p-0 bg-base-200 w-40 text-base-content w95-outset rounded-none">
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Contents</a></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1">Search...</a></li>
+                <li class="border-b border-gray-400 my-0.5 mx-1 border-b border-white"></li>
+                <li><a class="hover:bg-primary hover:text-white rounded-none px-4 py-1" onclick="about_modal.showModal()">About WinDaisy...</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="flex gap-1 p-1 pl-2 border-t border-white border-b border-gray-400 border-b border-white shrink-0">
+        <button class="btn btn-sm rounded-none min-h-0 h-6 px-2 hover:w95-outset active:w95-inset border border-transparent">
+            📄 <span class="sr-only">New</span>
+        </button>
+        <button class="btn btn-sm rounded-none min-h-0 h-6 px-2 hover:w95-outset active:w95-inset border border-transparent">
+            📂 <span class="sr-only">Open</span>
+        </button>
+        <button class="btn btn-sm rounded-none min-h-0 h-6 px-2 hover:w95-outset active:w95-inset border border-transparent">
+            💾 <span class="sr-only">Save</span>
+        </button>
+        <div class="w-px h-5 bg-gray-400 border-r border-white mx-1 self-center"></div>
+        <button class="btn btn-sm rounded-none min-h-0 h-6 px-2 hover:w95-outset active:w95-inset border border-transparent">
+            🖨️ <span class="sr-only">Print</span>
+        </button>
+        <div class="w-px h-5 bg-gray-400 border-r border-white mx-1 self-center"></div>
+        <button class="btn btn-sm rounded-none min-h-0 h-6 px-2 hover:w95-outset active:w95-inset border border-transparent">
+            ✂️ <span class="sr-only">Cut</span>
+        </button>
+        <button class="btn btn-sm rounded-none min-h-0 h-6 px-2 hover:w95-outset active:w95-inset border border-transparent">
+            📋 <span class="sr-only">Copy</span>
+        </button>
+         <button class="btn btn-sm rounded-none min-h-0 h-6 px-2 hover:w95-outset active:w95-inset border border-transparent">
+            📋 <span class="sr-only">Paste</span>
+        </button>
+        <div class="w-px h-5 bg-gray-400 border-r border-white mx-1 self-center"></div>
+        <button class="btn btn-sm rounded-none min-h-0 h-6 px-2 hover:w95-outset active:w95-inset border border-transparent">
+             ❓ <span class="sr-only">Help</span>
+        </button>
+    </div>
+
+    <!-- Main Workspace -->
+    <div class="flex flex-1 p-1 gap-1 overflow-hidden">
+        
+        <!-- Sidebar / TreeView -->
+        <div class="w-64 w95-inset bg-base-100 flex flex-col overflow-y-auto p-1 text-base-content">
+            <ul class="ml-1">
+                <li>
+                    <details open>
+                        <summary>Desktop</summary>
+                        <ul class="ml-4">
+                            <li>
+                                <details open>
+                                    <summary>My Computer</summary>
+                                    <ul class="ml-4">
+                                        <li>
+                                            <details open>
+                                                <summary>C: (Local Disk)</summary>
+                                                <ul class="ml-4">
+                                                    <li>
+                                                        <details>
+                                                            <summary>Program Files</summary>
+                                                            <ul class="ml-4">
+                                                                <li class="leaf">WinDaisy</li>
+                                                                <li class="leaf">Common Files</li>
+                                                            </ul>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details open>
+                                                            <summary>Users</summary>
+                                                            <ul class="ml-4">
+                                                                <li class="leaf">Admin</li>
+                                                                <li class="leaf bg-primary text-white px-0.5 border border-dotted border-white">Public</li>
+                                                            </ul>
+                                                        </details>
+                                                    </li>
+                                                    <li class="leaf">Windows</li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                        <li class="leaf">D: (Data)</li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li class="leaf">Recycle Bin</li>
+                            <li class="leaf">Network Neighborhood</li>
+                        </ul>
+                    </details>
+                </li>
+            
+                <li>
+                    <details open>
+                        <summary>Themes</summary>
+                        <ul class="ml-4">
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'aero')">Aero</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'base')">Base</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'brick')">Brick</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'classic')">Classic</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'classic-classic')">Classic Classic</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'classic-standard')">Classic Standard</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'desert')">Desert</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'eggplant')">Eggplant</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'embedded')">Embedded</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'high-contrast-1')">High Contrast 1</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'high-contrast-2')">High Contrast 2</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'high-contrast-black')">High Contrast Black</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'high-contrast-white')">High Contrast White</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'lilac')">Lilac</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'luna')">Luna</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'luna-olive-green')">Luna Olive Green</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'luna-silver')">Luna Silver</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'maple')">Maple</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'marine')">Marine</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'plum')">Plum</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'pumpkin')">Pumpkin</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'rainy-day')">Rainy Day</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'red-white-blue')">Red White Blue</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'rose')">Rose</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'royale')">Royale</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'royale-noir')">Royale Noir</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'slate')">Slate</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'spruce')">Spruce</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'storm')">Storm</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'teal')">Teal</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'wheat')">Wheat</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'windows')">Windows</li>
+                                <li class="leaf cursor-pointer hover:bg-primary hover:text-white" onclick="document.documentElement.setAttribute('data-theme', 'zune')">Zune</li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Master / Detail Area -->
+        <div class="flex-1 flex flex-col gap-1 overflow-hidden">
+            
+            <!-- Datagrid (Master) -->
+            <div class="flex-1 w95-inset bg-base-100 overflow-auto">
+                <table class="table table-xs table-pin-rows grid-lines w-full">
+                    <thead class="bg-base-200">
+                        <tr class="text-base-content">
+                            <th class="border-b border-r border-gray-400 bg-base-200 rounded-none font-normal p-1">ID</th>
+                            <th class="border-b border-r border-gray-400 bg-base-200 rounded-none font-normal p-1">First Name</th>
+                            <th class="border-b border-r border-gray-400 bg-base-200 rounded-none font-normal p-1">Last Name</th>
+                            <th class="border-b border-r border-gray-400 bg-base-200 rounded-none font-normal p-1">Department</th>
+                            <th class="border-b border-r border-gray-400 bg-base-200 rounded-none font-normal p-1">Role</th>
+                            <th class="border-b border-r border-gray-400 bg-base-200 rounded-none font-normal p-1">Status</th>
+                            <th class="border-b border-r border-gray-400 bg-base-200 rounded-none font-normal p-1">Last Login</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-base-100 text-base-content font-mono">
+                        <tr class="hover:bg-primary hover:text-white cursor-pointer">
+                            <td>1000</td> <td>Cankat</td> <td>Akdemir</td> <td>Engineering</td> <td>Developer</td> <td>Active</td> <td>2025-10-15</td>
+                        </tr>
+                        <tr class="hover:bg-primary hover:text-white cursor-pointer">
+                            <td>1001</td> <td>John</td> <td>Doe</td> <td>Engineering</td> <td>Developer</td> <td>Active</td> <td>2025-10-15</td>
+                        </tr>
+                        <tr class="hover:bg-primary hover:text-white cursor-pointer bg-primary text-white">
+                            <td>1002</td> <td>Jane</td> <td>Smith</td> <td>Marketing</td> <td>Manager</td> <td>Active</td> <td>2025-10-16</td>
+                        </tr>
+                        <tr class="hover:bg-primary hover:text-white cursor-pointer">
+                            <td>1003</td> <td>Bob</td> <td>Johnson</td> <td>Sales</td> <td>Rep</td> <td>Away</td> <td>2025-10-14</td>
+                        </tr>
+                        <tr class="hover:bg-primary hover:text-white cursor-pointer">
+                            <td>1004</td> <td>Alice</td> <td>Brown</td> <td>HR</td> <td>Specialist</td> <td>Active</td> <td>2025-10-16</td>
+                        </tr>
+                        <tr class="hover:bg-primary hover:text-white cursor-pointer">
+                            <td>1005</td> <td>Charlie</td> <td>Davis</td> <td>Engineering</td> <td>QA</td> <td>Offline</td> <td>2025-10-10</td>
+                        </tr>
+                         <!-- More rows to show scrolling -->
+                        <tr class="hover:bg-primary hover:text-white cursor-pointer"><td>1006</td> <td>Eve</td> <td>Wilson</td> <td>Support</td> <td>Lead</td> <td>Active</td> <td>2025-10-16</td></tr>
+                        <tr class="hover:bg-primary hover:text-white cursor-pointer"><td>1007</td> <td>Frank</td> <td>Miller</td> <td>Operations</td> <td>Director</td> <td>Active</td> <td>2025-10-15</td></tr>
+                        <tr class="hover:bg-primary hover:text-white cursor-pointer"><td>1008</td> <td>Grace</td> <td>Taylor</td> <td>Legal</td> <td>Counsel</td> <td>Busy</td> <td>2025-10-16</td></tr>
+                        <tr class="hover:bg-primary hover:text-white cursor-pointer"><td>1009</td> <td>Henry</td> <td>Anderson</td> <td>Finance</td> <td>Analyst</td> <td>Active</td> <td>2025-10-15</td></tr>
+                        <tr class="hover:bg-primary hover:text-white cursor-pointer"><td>1010</td> <td>Ivy</td> <td>Thomas</td> <td>IT</td> <td>Admin</td> <td>Active</td> <td>2025-10-16</td></tr>
+                        <tr class="hover:bg-primary hover:text-white cursor-pointer"><td>1011</td> <td>Jack</td> <td>Jackson</td> <td>Sales</td> <td>Rep</td> <td>Active</td> <td>2025-10-14</td></tr>
+                         <tr class="hover:bg-primary hover:text-white cursor-pointer"><td>1012</td> <td>Kelly</td> <td>White</td> <td>Marketing</td> <td>Designer</td> <td>Active</td> <td>2025-10-16</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Detail Form (Bottom Half) -->
+            <div class="h-64 bg-base-200 w95-outset p-2 flex flex-col gap-2 shrink-0">
+                <fieldset class="border border-t-gray-500 border-l-gray-500 border-r-white border-b-white p-2 relative mt-2">
+                    <legend class="bg-base-200 px-1 ml-2 text-sm">Employee Details</legend>
+                    
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <!-- Left Column -->
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center">
+                                <label class="w-24 text-right pr-2">ID:</label>
+                                <input type="text" class="input input-xs w-full rounded-none w95-inset border-none shadow-none bg-white h-6 input-disabled" value="1002" disabled>
+                            </div>
+                            <div class="flex items-center">
+                                <label class="w-24 text-right pr-2">First Name:</label>
+                                <input type="text" class="input input-xs w-full rounded-none w95-inset border-none shadow-none bg-white h-6 focus:outline-none" value="Jane">
+                            </div>
+                            <div class="flex items-center">
+                                <label class="w-24 text-right pr-2">Last Name:</label>
+                                <input type="text" class="input input-xs w-full rounded-none w95-inset border-none shadow-none bg-white h-6 focus:outline-none" value="Smith">
+                            </div>
+                            <div class="flex items-center">
+                                <label class="w-24 text-right pr-2">Department:</label>
+                                <select class="select-xs w-full rounded-none w95-inset border-none shadow-none bg-white h-6 focus:outline-none pl-1">
+                                    <option>Engineering</option>
+                                    <option selected>Marketing</option>
+                                    <option>Sales</option>
+                                    <option>HR</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="flex flex-col gap-2">
+                             <div class="flex items-center">
+                                <label class="w-24 text-right pr-2">Job Title:</label>
+                                <input type="text" class="input input-xs w-full rounded-none w95-inset border-none shadow-none bg-white h-6 focus:outline-none" value="Manager">
+                            </div>
+                            <div class="flex items-center">
+                                <label class="w-24 text-right pr-2">Status:</label>
+                                <div class="flex gap-4">
+                                    <label class="label cursor-pointer gap-1 p-0">
+                                        <input type="radio" name="status" class="radio radio-xs" checked />
+                                        <span class="label-text text-base-content">Active</span>
+                                    </label>
+                                    <label class="label cursor-pointer gap-1 p-0">
+                                        <input type="radio" name="status" class="radio radio-xs" />
+                                        <span class="label-text text-base-content">Inactive</span>
+                                    </label>
+                                </div>
+                            </div>
+                             <div class="flex items-center">
+                                <label class="w-24 text-right pr-2">Notes:</label>
+                                <textarea class="textarea textarea-xs w-full rounded-none w95-inset border-none shadow-none bg-white h-16 resize-none focus:outline-none p-1">Key account manager for Q4 campaigns.</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex justify-end gap-2 mt-4">
+                        <button class="btn bg-base-200 hover:bg-base-200 active:w95-inset min-h-0 h-6 px-4">OK</button>
+                        <button class="btn bg-base-200 hover:bg-base-200 active:w95-inset min-h-0 h-6 px-4">Cancel</button>
+                        <button class="btn bg-base-200 hover:bg-base-200 active:w95-inset min-h-0 h-6 px-4" disabled>Apply</button>
+                    </div>
+
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="h-6 bg-base-200 border-t border-gray-400 flex items-center px-1 text-xs gap-1 shadow-[inset_0_1px_0_white] shrink-0 pb-1">
+        <div class="flex-1 border border-gray-400 border-r-white border-b-white px-1">Ready</div>
+        <div class="w-16 border border-gray-400 border-r-white border-b-white px-1 text-center">INS</div>
+        <div class="w-16 border border-gray-400 border-r-white border-b-white px-1 text-center">CAPS</div>
+        <div class="w-16 border border-gray-400 border-r-white border-b-white px-1 text-center">NUM</div>
+    </div>
+
+
+    <!-- About Modal (Winver Style) -->
+    <dialog id="about_modal" class="modal">
+        <div class="w95-outset bg-base-200 p-1 w-[420px] shadow-2xl text-base-content relative">
+            <!-- Title Bar -->
+            <div class="bg-primary text-white px-1 py-0.5 flex justify-between items-center h-6 mb-4 select-none">
+                <div class="font-bold text-xs pl-1">About WinDaisy</div>
+                <button class="w-4 h-4 bg-base-200 text-base-content border-t border-l border-white border-b border-r border-black text-[10px] font-bold leading-none flex items-center justify-center w95-outset hover:bg-base-100 active:w95-inset active:shadow-none" onclick="about_modal.close()">✕</button>
+            </div>
+
+            <div class="flex gap-4 px-2 pb-4">
+                <!-- Icon Area -->
+                <div class="w-16 pt-2 flex flex-col items-center">
+                     <!-- Windows-like Icon -->
+                     <svg class="w-10 h-10 fill-none stroke-black stroke-2" viewBox="0 0 24 24">
+                        <path d="M2 2 L22 2 L22 22 L2 22 Z" class="fill-white"/>
+                        <path d="M2 8 L22 8" />
+                        <path d="M2 4 L22 4" class="fill-primary" stroke="none"/>
+                        <rect x="4" y="4" width="4" height="2" class="fill-white" stroke="none"/>
+                     </svg>
+                </div>
+
+                <!-- Text Content -->
+                <div class="text-xs flex-1 font-sans">
+                    <div class="text-xl font-bold mb-2 font-serif tracking-wide">WinDaisy</div>
+                    <p class="mb-4">
+                        Enterprise Edition<br>
+                        Version 1.0 (Build 2026.1.10)<br>
+                        Copyright © 2026 CNKT Corp.
+                    </p>
+                    <p class="mb-3">
+                        This product is licensed under the MIT License to:
+                    </p>
+                    <div class="mb-4 ml-4">
+                        Current User<br>
+                        WinDaisy Org
+                    </div>
+                    
+                    <div class="w-full h-px bg-gray-400 border-b border-white mb-3"></div>
+
+                    <p>Physical memory available to Windows: <strong>2,097,152 KB</strong></p>
+                    <p>System Resources: <strong>85% Free</strong></p>
+                </div>
+            </div>
+
+            <!-- Footer Buttons -->
+            <div class="flex justify-end px-4 pb-2 pt-2">
+                <button class="btn btn-sm rounded-none w95-outset bg-base-200 border-none hover:bg-base-200 active:w95-inset active:border-none min-h-0 h-6 px-8 font-normal normal-case text-xs text-base-content" onclick="about_modal.close()">OK</button>
+            </div>
+        </div>
+        
+        <!-- Backdrop to close on click outside -->
+        <form method="dialog" class="modal-backdrop bg-transparent">
+            <button class="cursor-default">close</button>
+        </form>
+    </dialog>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles for Win95-like theme */
+.w95-outset {
+    border-style: solid;
+    border-width: 1px;
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: gray;
+    border-right-color: gray;
+    box-shadow: 1px 1px 0 black;
+}
+
+.w95-inset {
+    border-style: solid;
+    border-width: 1px;
+    border-top-color: gray;
+    border-left-color: gray;
+    border-bottom-color: white;
+    border-right-color: white;
+    box-shadow: inset 1px 1px 0 black;
+}
+
+.w95-button-active {
+    border-style: solid;
+    border-width: 1px;
+    border-top-color: black;
+    border-left-color: black;
+    border-bottom-color: white;
+    border-right-color: white;
+    background-color: gray; /* Example color for active state */
+}
+
+/* Base DaisyUI theme configuration */
+@layer theme {
+    :root {
+        --theme-controller-btn-reset: 0;
+        --rounded-box: 0;
+        --rounded-btn: 0;
+        --rounded-badge: 0;
+        --animation-btn: 0;
+        --animation-input: 0;
+        --btn-focus-scale: 1;
+        --tab-border: 1px;
+        --tab-radius: 0;
+    }
+}
+
+/* Ensure table cells don't have default padding */
+.grid-lines td, .grid-lines th {
+    padding: 1px 4px;
+}
+.grid-lines td {
+    border-right: 1px solid oklch(var(--b3));
+}
+.grid-lines tr {
+    border-bottom: 1px solid oklch(var(--b3));
+}
+.grid-lines thead th {
+    border-bottom: 1px solid oklch(var(--bc));
+}
+
+/* Custom Treeview styles */
+details summary {
+    cursor: pointer;
+    padding: 2px 0;
+    user-select: none;
+}
+details summary:hover {
+    background-color: oklch(var(--b2)); /* Lighter background on hover for summary */
+}
+details[open] summary {
+    background-color: oklch(var(--b2)); /* Keep background lighter when open */
+}
+details summary::marker {
+    content: none; /* Remove default marker */
+}
+details summary::-webkit-details-marker {
+    display: none; /* Remove default marker for webkit */
+}
+
+details summary:before {
+    content: '▶'; /* Custom closed indicator */
+    margin-right: 4px;
+    font-size: 8px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+}
+
+details[open] summary:before {
+    content: '▼'; /* Custom open indicator */
+}
+
+.leaf {
+    padding: 2px 0;
+}
+.leaf:hover {
+    background-color: oklch(var(--b2)); /* Lighter background on hover for leaves */
+}
+.dropdown:focus-within > [tabindex="0"] {
+    background-color: var(--fallback-p, oklch(var(--p) / 1));
+    color: var(--fallback-pc, oklch(var(--pc) / 1));
+}

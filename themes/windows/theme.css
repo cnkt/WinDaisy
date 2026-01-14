@@ -1,0 +1,35 @@
+@plugin "daisyui/theme" {
+  name: "windows";
+  default: false;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F0F0F0;
+  --color-base-300: #A0A0A0;
+  --color-base-content: #000000;
+  --color-primary: #99B4D1;
+  --color-primary-content: #000000;
+  --color-secondary: #BFCDDB;
+  --color-secondary-content: #000000;
+  --color-accent: #3399FF;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #F0F0F0;
+  --color-neutral-content: #000000;
+  --color-info: #FFFFE1;
+  --color-info-content: #000000;
+  --color-success: #008000;
+  --color-success-content: #FFFFFF;
+  --color-warning: #808000;
+  --color-warning-content: #FFFFFF;
+  --color-error: #FF0000;
+  --color-error-content: #FFFFFF;
+
+  --radius-selector: 0px;
+  --radius-field: 0px;
+  --radius-box: 0px;
+
+  --border: 2px;
+  --depth: 0;
+  --noise: 0;
+}
